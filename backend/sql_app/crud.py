@@ -33,8 +33,12 @@ def create_user(db: Session, user: schemas.UserCreate):
     return db_user, password
 
 
-def get_register_request(db: Session, skip: int = 0, limit: int = 100):
+def get_register_requests(db: Session, skip: int = 0, limit: int = 100):
     return db.query(models.RegisterRequest).offset(skip).limit(limit).all()
+
+
+def get_register_request(db: Session, register_request_id: int):
+    return db.query(models.RegisterRequest).filter(models.RegisterRequest.id == register_request_id).first()
 
 
 def create_register_request(db: Session, register_request: schemas.RegisterRequestCreate):

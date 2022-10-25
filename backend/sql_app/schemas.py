@@ -19,6 +19,10 @@ class RegisterRequest(RegisterRequestBase):
         orm_mode = True
 
 
+class RegisterUser(BaseModel):
+    id: int
+
+
 class UserBase(BaseModel):
     name: str
     surname: str

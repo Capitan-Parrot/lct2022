@@ -6,10 +6,10 @@ from fastapi import FastAPI
 import uvicorn
 from starlette.staticfiles import StaticFiles
 
-from sql_app import models
-from sql_app.database import engine
-from priceByCityDistrict import Parser
-from routes.index import router
+from .sql_app import models
+from .sql_app.database import engine
+from .priceByCityDistrict import Parser
+from .routes.index import router
 
 logging.basicConfig(format="%(asctime)s [%(name)s] - %(levelname)s: %(message)s", level=logging.INFO)
 models.Base.metadata.create_all(bind=engine)
@@ -31,13 +31,13 @@ logger = logging.getLogger(__name__)
 app.include_router(router)
 
 
-@app.get("/check")
+@app.get("/")
 async def root():
     return {"message": "ok"}
 
+parser = Parser()
+parser.start()
 
 if __name__ == '__main__':
-    parser = Parser()
-    parser.start()
     uvicorn.run(app, host="0.0.0.0", port=8000)
 
