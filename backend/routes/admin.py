@@ -25,8 +25,8 @@ async def get_all_users(skip: int = 0, limit: int = 100, db: Session = Depends(g
     return users
 
 
-@adminRouter.post("/register")
-async def register(register_request_id: schemas.RegisterUser, db: Session = Depends(get_db)):
+@adminRouter.post("/createUser", response_model=schemas.UserOut)
+async def register(register_request_id: schemas.UserIn, db: Session = Depends(get_db)):
     user = crud.get_register_request(db, register_request_id.id)
     user, user_password = crud.create_user(db, user)
     return user, user_password

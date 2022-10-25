@@ -19,10 +19,6 @@ class RegisterRequest(RegisterRequestBase):
         orm_mode = True
 
 
-class RegisterUser(BaseModel):
-    id: int
-
-
 class UserBase(BaseModel):
     name: str
     surname: str
@@ -32,13 +28,23 @@ class UserBase(BaseModel):
     hashed_password: str
 
 
-class UserCreate(UserBase):
-    pass
-
-
 class User(UserBase):
     id: int
     is_banned: bool
 
     class Config:
         orm_mode = True
+
+class UserIn(BaseModel):
+    id: int
+
+
+class UserOut(BaseModel):
+    user: User
+    password: str
+
+
+class UserCreate(UserBase):
+    pass
+
+
