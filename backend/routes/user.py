@@ -26,5 +26,4 @@ async def register(register_request: schemas.RegisterRequestCreate, db: Session 
 @userRouter.post("/uploadfile")
 async def create_upload_file(file: UploadFile):
     flats = await get_flats_from_excel_file(file)
-    print(type(flats))
     return flats
