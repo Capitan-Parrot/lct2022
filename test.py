@@ -34,10 +34,10 @@ data = {
 session = requests.session()
 adapter = TlsAdapter(ssl.OP_NO_TLSv1 | ssl.OP_NO_TLSv1_1)
 session.mount("https://", adapter)
-url = 'https://www.avito.ru/js/1/map/items?'
+url = 'https://www.avito.ru/moskva/kvartiry/3-k._kvartira_739m_15et._2411657289'
 try:
-    r = session.request('GET', url, params=data)
-    r = r.json()
-    pprint(['https://www.avito.ru' + elem['urlPath'] for elem in r['items']])
+    r = session.request('GET', url)
+
+    pprint(r.text)
 except Exception as exception:
     print(exception)
