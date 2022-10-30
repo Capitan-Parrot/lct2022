@@ -30,7 +30,6 @@ def check(pageSource, start_str, end_str):
     start = pageSource.find(start_str)
     end = pageSource.find(end_str, start)
     pageSource = pageSource[start + len(start_str):end].replace('&nbsp;', '').replace('\xa0', ' ')
-    # pageSource=pageSource[start + len(start_str):end].replace('xa0;', '')
     return pageSource
 
 
@@ -39,25 +38,26 @@ def get_flat_params(url):
     pageSource = str(pageSource.text)
     # print(pageSource)
     print(check(pageSource, 'data-marker="item-view/title-info">', '</span>'))  # 3-к. квартира, 73,9м², 1/5эт.
-    buff_str = check(pageSource, 'class="params-paramsList-zLpAu"',
-                     '</ul>')  # отдельно сохраняю словарь с параметраии
-    list1 = {'Количество комнат:': 0,
-             'Общая площадь:': 0,
-             'Площадь кухни:': 0,
-             'Жилая площадь:': 0,
-             'Этаж:': 0,
-             'Тип комнат:': 0,
-             'Высота потолков:': 0,
-             'Санузел:': 0,
-             'Окна:': 0,
-             'Ремонт:': 0,
-             'Способ продажи:': 0}
+
+    list1 = {}
 
     list1_sub = ['Количество комнат:', 'Общая площадь:', 'Площадь кухни:', 'Жилая площадь:', 'Этаж:', 'Тип комнат:',
                  'Высота потолков:', 'Санузел:', 'Окна:', 'Ремонт:', 'Способ продажи:']
 
-    for elem in list1_sub:  # парселинг отдельно списка с параметрами
+    list2_sub = ['Тип дома:', 'Год постройки:', 'Этажей в дома:', 'Пассажирский лифт:']
+
+    buff_str = check(pageSource, 'class="params-paramsList-zLpAu"',
+                     '</ul>')  # отдельно сохраняю словарь с параметраии
+
+    for elem in list1_sub:  # парселинг отдельно списка с параметрами(list1_sub)
         list1[elem] = check(buff_str, '</span>', '</li>')  # обращение к элементу словоря
+        buff_str = buff_str[:buff_str.find('</span>')] + buff_str[buff_str.find('</li>') + 5:]
+
+    buff_str = check(pageSource, 'class="style-item-params-list-vb1_H"',
+                     '</ul>')  # отдельно сохраняю второй список с параметраии
+
+    for elem in list2_sub:  # парселинг отдельно списка с параметрами(list2_sub)
+        list1[elem] = check(buff_str, '</span>', '</li>')
         buff_str = buff_str[:buff_str.find('</span>')] + buff_str[buff_str.find('</li>') + 5:]
 
     return list1
