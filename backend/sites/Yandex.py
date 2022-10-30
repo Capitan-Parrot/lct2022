@@ -1,7 +1,5 @@
 from pprint import pprint
-
 from requests import get
-
 from backend.getRectangle import get_rectangle_bounds
 
 x, y = get_rectangle_bounds([55.697965, 37.579133])

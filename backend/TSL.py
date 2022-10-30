@@ -1,13 +1,11 @@
-import ssl
-from pprint import pprint
-
 import requests
 from requests.adapters import HTTPAdapter
 from requests.packages.urllib3.poolmanager import PoolManager
 from requests.packages.urllib3.util import ssl_
-
-from backend.getRectangle import get_rectangle_bounds
-
+import ssl
+import undetected_chromedriver as uc
+from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
 
 class TlsAdapter(HTTPAdapter):
 
@@ -21,23 +19,23 @@ class TlsAdapter(HTTPAdapter):
         self.poolmanager = PoolManager(*pool_args, ssl_context=ctx, **pool_kwargs)
 
 
-x, y = get_rectangle_bounds([55.697965, 37.579133])
-
-data = {
-    "categoryId": "24",
-    "locationId": '637640',
-    "searchArea[lonLeft]": x[1],
-    "searchArea[latBottom]": y[0],
-    "searchArea[lonRight]": y[1],
-    "searchArea[latTop]": x[0],
-}
 session = requests.session()
 adapter = TlsAdapter(ssl.OP_NO_TLSv1 | ssl.OP_NO_TLSv1_1)
 session.mount("https://", adapter)
-url = 'https://www.avito.ru/js/1/map/items?'
-try:
-    r = session.request('GET', url, params=data)
-    r = r.json()
-    pprint(['https://www.avito.ru' + elem['urlPath'] for elem in r['items']])
-except Exception as exception:
-    print(exception)
+
+def get_url(url, params):
+    return session.request('GET', url, params=params).json()
+
+def get_page_content(url):
+    driver = webdriver.Chrome(ChromeDriverManager().install())
+    driver.maximize_window()
+    driver.get(url)
+    return driver.page_source
+
+def test(url, data=()):
+    if data:
+        return session.request('GET', url, params=data)
+    return session.request('GET', url)
+
+
+
