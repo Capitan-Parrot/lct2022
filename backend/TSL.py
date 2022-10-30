@@ -1,11 +1,15 @@
+
 import requests
 from requests.adapters import HTTPAdapter
 from requests.packages.urllib3.poolmanager import PoolManager
 from requests.packages.urllib3.util import ssl_
 import ssl
-import undetected_chromedriver as uc
+from scrapy import Spider, Request
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
+
+
+
 
 class TlsAdapter(HTTPAdapter):
 
@@ -28,14 +32,17 @@ def get_url(url, params):
 
 def get_page_content(url):
     driver = webdriver.Chrome(ChromeDriverManager().install())
-    driver.maximize_window()
     driver.get(url)
     return driver.page_source
 
-def test(url, data=()):
+
+
+def test(url, data=(), driver=None):
     if data:
         return session.request('GET', url, params=data)
-    return session.request('GET', url)
+    driver.get(url)
+    return driver.page_source
+
 
 
 
