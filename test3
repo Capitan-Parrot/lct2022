@@ -1,4 +1,7 @@
+import undetected_chromedriver as uc
 from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
+
 
 def cheak1(pageSource):
     start1 = pageSource.find('data-marker="item-view/title-info">')
@@ -17,13 +20,7 @@ def cheak(pageSource, start_str, end_str):
     return pageSource[start + len(start_str):end].replace('&nbsp;', '')
 
 
-
-
-
-
-
-
-driver = webdriver.Chrome()
+driver = webdriver.Chrome(ChromeDriverManager().install())
 driver.maximize_window()
 driver.get("https://www.avito.ru/moskva/kvartiry/3-k._kvartira_739m_15et._2411657289")
 pageSource = driver.page_source
