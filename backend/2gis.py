@@ -1,4 +1,7 @@
 import os
+import time
+
+import grequests
 import requests
 import json
 from backend.utils.getRectangle import get_rectangle_bounds
@@ -39,7 +42,7 @@ def api_parser(address):
     }
     url = "https://market-backend.api.2gis.ru/5.0/realty/markers?"
     response = requests.get(url, params=data)
-    buildings = response.json()['result']['items']
+    markers = response.json()['result']['items']
     data = {
         "locale": "ru_RU",
         "platform_code": "34",
@@ -49,12 +52,25 @@ def api_parser(address):
         "page": "1",
         "page_size": "20",
     }
+    buildings = (grequests.get('https://market-backend.api.2gis.ru/5.0/realty/items?', params=data | {'geo_id': j['building_id']}) for j in markers)
+    buildings = iter(grequests.map(buildings))
+    data = {
+        "locale": "ru_RU",
+        'key': os.getenv('2GIS_KEY'),
+        'fields': "items.locale,items.flags,search_attributes,items.adm_div,items.city_alias,items.region_id,items.segment_id,items.reviews,items.point,request_type,context_rubrics,query_context,items.links,items.name_ex,items.org,items.group,items.dates,items.external_content,items.contact_groups,items.comment,items.ads.options,items.email_for_sending.allowed,items.stat,items.stop_factors,items.description,items.geometry.centroid,items.geometry.selection,items.geometry.style,items.timezone_offset,items.context,items.level_count,items.address,items.is_paid,items.access,items.access_comment,items.for_trucks,items.is_incentive,items.paving_type,items.capacity,items.schedule,items.floors,ad,items.rubrics,items.routes,items.platforms,items.directions,items.barrier,items.reply_rate,items.purpose,items.attribute_groups,items.route_logo,items.has_goods,items.has_apartments_info,items.has_pinned_goods,items.has_realty,items.has_exchange,items.has_payments,items.has_dynamic_congestion,items.is_promoted,items.congestion,items.delivery,items.order_with_cart,search_type,items.has_discount,items.metarubrics,broadcast,items.detailed_subtype,items.temporary_unavailable_atm_services,items.poi_category,items.structure_info.material,items.structure_info.floor_type,items.structure_info.gas_type,items.structure_info.year_of_construction,items.structure_info.elevators_count,items.structure_info.is_in_emergency_state,items.structure_info.project_type",
+        "id": ','.join(j['building_id'] for j in markers)
+    }
+    url = "https://catalog.api.2gis.com/3.0/items/byid?"
+    response = requests.get(url, params=data)
+    info_buildings = response.json()
+    print(info_buildings)
+    exit()
     flats = []
     for building in buildings:
-        data['geo_id'] = building['building_id']
-        url = "https://market-backend.api.2gis.ru/5.0/realty/items?"
-        response = requests.get(url, params=data)
-        res = response.json()['result']['items']
+        # data['geo_id'] = building['building_id']
+        # url = "https://market-backend.api.2gis.ru/5.0/realty/items?"
+        # response = requests.get(url, params=data)
+        res = building.json()['result']['items']
         flats_in_building = []
         for i in range(len(res)):
             if res[i]['product']['attributes'][0]['value'] != 'Квартира':
@@ -97,4 +113,6 @@ def parse_2gis(address='Москва, Ферсмана, 3 к1'):
 
 if __name__ == '__main__':
     load_dotenv()
+    tick = time.time()
     parse_2gis()
+    print(time.time() - tick)
