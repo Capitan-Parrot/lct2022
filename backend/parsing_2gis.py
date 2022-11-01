@@ -104,8 +104,10 @@ def api_parser(main_flat):
                     'correcting': {
                         'floor': res[i]['product']['attributes'][3]['value'],
                         'square_flat': res[i]['product']['attributes'][2]['value'],
+                        'square_kitchen': 0,
                         'distance_from_metro': 0,
-                        'nearest_station': ''
+                        'nearest_station': '',
+                        'condition': ''
                     }
                 }
             else:
@@ -120,8 +122,10 @@ def api_parser(main_flat):
                     'correcting': {
                         'floor': res[i]['product']['attributes'][2]['value'],
                         'square_flat': res[i]['product']['attributes'][1]['value'],
+                        'square_kitchen': 0,
                         'distance_from_metro': 0,
-                        'nearest_station': ''
+                        'nearest_station': '',
+                        'condition': ''
                     }
                 }
             if check_is_analog(flat['content']['required'], main_flat):
