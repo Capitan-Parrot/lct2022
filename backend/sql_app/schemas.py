@@ -39,13 +39,11 @@ class Flat(BaseModel):
     address: str
     num_rooms: str
     building_segment: str
-    building_num_floors: str
+    building_num_floors: int
     building_material: str
-    floor: str
-    building_segment: str
-    building_num_floors: str
-    building_material: str
-    square_flat: str
-    square_kitchen: str
+    floor: int
+    square_flat: float
+    square_kitchen: float
     has_balcony: bool
     metro_distance: int
+    condition: str
