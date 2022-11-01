@@ -17,7 +17,7 @@
             "lf": 0
         }
     },
-    "the area of the apartment": {
+    "apartment area": {
         "<30": {
             "<30": 0,
             "30-50": 6,
@@ -84,7 +84,7 @@
             "10-15": 0
         }
     },
-    "the presence of a balcony / loggia": {
+    "balcony / loggia": {
         "no": {
             "no": 0,
             "there is": -5.5
@@ -94,7 +94,7 @@
             "there is": 0
         }
     },
-    "distance to the metro": {
+    "metro": {
         "<5": {
             "<5": 0,
             "5-10": 7,

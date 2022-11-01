@@ -4,6 +4,8 @@ import time
 import grequests
 import requests
 import json
+
+from backend.utils.checkIsAnalog import check_is_analog
 from backend.utils.getRectangle import get_rectangle_bounds
 from dotenv import load_dotenv
 
@@ -30,9 +32,7 @@ def create_address(building):
     return full_address
 
 
-def api_parser(address):
-    x_coord, y_coord, geo_id = get_coords_by_address(address)
-    x, y = get_rectangle_bounds([x_coord, y_coord])
+def get_markers(x, y):
     data = {
         "locale": "ru_RU",
         "platform_code": "34",
@@ -42,7 +42,10 @@ def api_parser(address):
     }
     url = "https://market-backend.api.2gis.ru/5.0/realty/markers?"
     response = requests.get(url, params=data)
-    markers = response.json()['result']['items']
+    return response.json()['result']['items']
+
+
+def get_buildings(x, y, markers):
     data = {
         "locale": "ru_RU",
         "platform_code": "34",
@@ -52,19 +55,31 @@ def api_parser(address):
         "page": "1",
         "page_size": "20",
     }
-    buildings = (grequests.get('https://market-backend.api.2gis.ru/5.0/realty/items?', params=data | {'geo_id': j['building_id']}) for j in markers)
-    buildings = iter(grequests.map(buildings))
+    buildings = (
+        grequests.get('https://market-backend.api.2gis.ru/5.0/realty/items?',
+                      params=data | {'geo_id': j['building_id']}) for j in markers)
+    return iter(grequests.map(buildings))
+
+
+def get_info_buildings(buildings_id):
     data = {
         "locale": "ru_RU",
         'key': os.getenv('2GIS_KEY'),
         'fields': "items.locale,items.flags,search_attributes,items.adm_div,items.city_alias,items.region_id,items.segment_id,items.reviews,items.point,request_type,context_rubrics,query_context,items.links,items.name_ex,items.org,items.group,items.dates,items.external_content,items.contact_groups,items.comment,items.ads.options,items.email_for_sending.allowed,items.stat,items.stop_factors,items.description,items.geometry.centroid,items.geometry.selection,items.geometry.style,items.timezone_offset,items.context,items.level_count,items.address,items.is_paid,items.access,items.access_comment,items.for_trucks,items.is_incentive,items.paving_type,items.capacity,items.schedule,items.floors,ad,items.rubrics,items.routes,items.platforms,items.directions,items.barrier,items.reply_rate,items.purpose,items.attribute_groups,items.route_logo,items.has_goods,items.has_apartments_info,items.has_pinned_goods,items.has_realty,items.has_exchange,items.has_payments,items.has_dynamic_congestion,items.is_promoted,items.congestion,items.delivery,items.order_with_cart,search_type,items.has_discount,items.metarubrics,broadcast,items.detailed_subtype,items.temporary_unavailable_atm_services,items.poi_category,items.structure_info.material,items.structure_info.floor_type,items.structure_info.gas_type,items.structure_info.year_of_construction,items.structure_info.elevators_count,items.structure_info.is_in_emergency_state,items.structure_info.project_type",
-        "id": ','.join(j['building_id'] for j in markers)
+        "id": buildings_id
     }
     url = "https://catalog.api.2gis.com/3.0/items/byid?"
     response = requests.get(url, params=data)
-    info_buildings = response.json()
-    print(info_buildings)
-    exit()
+    return response.json()
+
+
+def api_parser(main_flat):
+    x_coord, y_coord, geo_id = get_coords_by_address(main_flat.address)
+    x, y = get_rectangle_bounds([x_coord, y_coord])
+    markers = get_markers(x, y)
+    buildings = get_buildings(x, y)
+    info_buildings = get_info_buildings(','.join(j['building_id'] for j in markers))
+    # exit()
     flats = []
     for building in buildings:
         # data['geo_id'] = building['building_id']
@@ -75,38 +90,50 @@ def api_parser(address):
         for i in range(len(res)):
             if res[i]['product']['attributes'][0]['value'] != 'Квартира':
                 continue
-            flats_in_building.append({})
-            flats_in_building[-1]['meta'] = {'building_id': res[i]['building']['address']['building_id'],
-                                             'flat_id': res[i]['product']['id']}
-
+            flat = {'meta': {'building_id': res[i]['building']['address']['building_id'],
+                             'flat_id': res[i]['product']['id']}}
             if len(res[i]['product']['attributes']) == 4:
-                flats_in_building[-1]['content'] = {
-                    'needed': {
+                flat['content'] = {
+                    'required': {
                         'address': create_address(res[i]['building']),
-                        'num_rooms': res[i]['product']['attributes'][1]['value']
+                        'num_rooms': res[i]['product']['attributes'][1]['value'],
+                        'building_segment': '',
+                        'building_num_floors': 0,
+                        'building_material': ''
                     },
                     'correcting': {
                         'floor': res[i]['product']['attributes'][3]['value'],
-                        'square_flat': res[i]['product']['attributes'][2]['value']
+                        'square_flat': res[i]['product']['attributes'][2]['value'],
+                        'distance_from_metro': 0,
+                        'nearest_station': ''
                     }
                 }
             else:
-                flats_in_building[-1]['content'] = {
-                    'needed': {
+                flat['content'] = {
+                    'required': {
                         'address': create_address(res[i]['building']),
-                        'num_rooms': res[i]['product']['attributes'][0]['value']
+                        'num_rooms': res[i]['product']['attributes'][0]['value'],
+                        'building_segment': '',
+                        'building_num_floors': 0,
+                        'building_material': ''
                     },
                     'correcting': {
                         'floor': res[i]['product']['attributes'][2]['value'],
-                        'square_flat': res[i]['product']['attributes'][1]['value']
+                        'square_flat': res[i]['product']['attributes'][1]['value'],
+                        'distance_from_metro': 0,
+                        'nearest_station': ''
                     }
                 }
+            if check_is_analog(flat['content']['needed'], main_flat):
+                flats.append(flat)
         flats.extend(flats_in_building)
     return flats
 
 
-def parse_2gis(address='Москва, Ферсмана, 3 к1'):
-    data = api_parser(address)
+def parse_2gis(main_flat=None):
+    if main_flat is None:
+        main_flat = {'address': 'Москва, Ферсмана, 3 к1'}
+    data = api_parser(main_flat)
     with open('data.json', 'w', encoding='utf-8') as outfile:
         json.dump(data, outfile, indent=4, ensure_ascii=False)
 

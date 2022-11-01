@@ -1,0 +1,2546 @@
+[
+    {
+        "meta": {
+            "building_id": "4504235283029685",
+            "flat_id": "70250201981618616"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, проспект 60-летия Октября, 17",
+                "num_rooms": "2"
+            },
+            "correcting": {
+                "floor": "8",
+                "square_flat": "55"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235283029685",
+            "flat_id": "70250201981780856"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, проспект 60-летия Октября, 17",
+                "num_rooms": "3"
+            },
+            "correcting": {
+                "floor": "16",
+                "square_flat": "107"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235283029685",
+            "flat_id": "70250201981759374"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, проспект 60-летия Октября, 17",
+                "num_rooms": "3"
+            },
+            "correcting": {
+                "floor": "31",
+                "square_flat": "138"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235283029685",
+            "flat_id": "70250201981703802"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, проспект 60-летия Октября, 17",
+                "num_rooms": "2"
+            },
+            "correcting": {
+                "floor": "29",
+                "square_flat": "53.5"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235283029685",
+            "flat_id": "70250201981654246"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, проспект 60-летия Октября, 17",
+                "num_rooms": "2"
+            },
+            "correcting": {
+                "floor": "14",
+                "square_flat": "61"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235283029685",
+            "flat_id": "70250201981653243"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, проспект 60-летия Октября, 17",
+                "num_rooms": "2"
+            },
+            "correcting": {
+                "floor": "22",
+                "square_flat": "66.5"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235283029685",
+            "flat_id": "70250201981642673"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, проспект 60-летия Октября, 17",
+                "num_rooms": "3"
+            },
+            "correcting": {
+                "floor": "35",
+                "square_flat": "67"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235283029685",
+            "flat_id": "70250201981640965"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, проспект 60-летия Октября, 17",
+                "num_rooms": "2"
+            },
+            "correcting": {
+                "floor": "8",
+                "square_flat": "55"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235283029685",
+            "flat_id": "70250201981483055"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, проспект 60-летия Октября, 17",
+                "num_rooms": "2"
+            },
+            "correcting": {
+                "floor": "8",
+                "square_flat": "55"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235283029685",
+            "flat_id": "70250201981303985"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, проспект 60-летия Октября, 17",
+                "num_rooms": "2"
+            },
+            "correcting": {
+                "floor": "8",
+                "square_flat": "55"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235283029685",
+            "flat_id": "70250201981223932"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, проспект 60-летия Октября, 17",
+                "num_rooms": "2"
+            },
+            "correcting": {
+                "floor": "23",
+                "square_flat": "81"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235283029685",
+            "flat_id": "70250201981220190"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, проспект 60-летия Октября, 17",
+                "num_rooms": "2"
+            },
+            "correcting": {
+                "floor": "8",
+                "square_flat": "55"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235283029685",
+            "flat_id": "70250201981218157"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, проспект 60-летия Октября, 17",
+                "num_rooms": "2"
+            },
+            "correcting": {
+                "floor": "8",
+                "square_flat": "55"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235283029685",
+            "flat_id": "70250201981142926"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, проспект 60-летия Октября, 17",
+                "num_rooms": "Квартира"
+            },
+            "correcting": {
+                "floor": "5",
+                "square_flat": "25"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235283029685",
+            "flat_id": "70250201981094795"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, проспект 60-летия Октября, 17",
+                "num_rooms": "2"
+            },
+            "correcting": {
+                "floor": "27",
+                "square_flat": "61"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235283029685",
+            "flat_id": "70250201981090594"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, проспект 60-летия Октября, 17",
+                "num_rooms": "Квартира"
+            },
+            "correcting": {
+                "floor": "33",
+                "square_flat": "32"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235283029685",
+            "flat_id": "70250201981077615"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, проспект 60-летия Октября, 17",
+                "num_rooms": "2"
+            },
+            "correcting": {
+                "floor": "29",
+                "square_flat": "72.5"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235283029685",
+            "flat_id": "70250201971195924"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, проспект 60-летия Октября, 17",
+                "num_rooms": "2"
+            },
+            "correcting": {
+                "floor": "22",
+                "square_flat": "66.5"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235283029685",
+            "flat_id": "70250201967076463"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, проспект 60-летия Октября, 17",
+                "num_rooms": "2"
+            },
+            "correcting": {
+                "floor": "28",
+                "square_flat": "72"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235283029685",
+            "flat_id": "70250201966773622"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, проспект 60-летия Октября, 17",
+                "num_rooms": "1"
+            },
+            "correcting": {
+                "floor": "33",
+                "square_flat": "32"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "70030076147500273",
+            "flat_id": "70250201981492834"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, улица Вавилова, 27",
+                "num_rooms": "2"
+            },
+            "correcting": {
+                "floor": "8",
+                "square_flat": "71.4"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "70030076147500273",
+            "flat_id": "70250201967106030"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, улица Вавилова, 27",
+                "num_rooms": "2"
+            },
+            "correcting": {
+                "floor": "8",
+                "square_flat": "70"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "70030076147500273",
+            "flat_id": "70250201966999866"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, улица Вавилова, 27",
+                "num_rooms": "2"
+            },
+            "correcting": {
+                "floor": "14",
+                "square_flat": "72.4"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "70030076147500273",
+            "flat_id": "70250201966896674"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, улица Вавилова, 27",
+                "num_rooms": "3"
+            },
+            "correcting": {
+                "floor": "18",
+                "square_flat": "98"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "70030076147500273",
+            "flat_id": "70250201966785107"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, улица Вавилова, 27",
+                "num_rooms": "1"
+            },
+            "correcting": {
+                "floor": "4",
+                "square_flat": "43"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "70030076147500273",
+            "flat_id": "70250201966713368"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, улица Вавилова, 27",
+                "num_rooms": "2"
+            },
+            "correcting": {
+                "floor": "6",
+                "square_flat": "72.5"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "70030076147500273",
+            "flat_id": "70250201966659752"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, улица Вавилова, 27",
+                "num_rooms": "1"
+            },
+            "correcting": {
+                "floor": "19",
+                "square_flat": "47.2"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "70030076147500273",
+            "flat_id": "70250201966644720"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, улица Вавилова, 27",
+                "num_rooms": "4"
+            },
+            "correcting": {
+                "floor": "18",
+                "square_flat": "75"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "70030076147500273",
+            "flat_id": "70250201966458096"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, улица Вавилова, 27",
+                "num_rooms": "2"
+            },
+            "correcting": {
+                "floor": "18",
+                "square_flat": "70.8"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "70030076147500273",
+            "flat_id": "70250201966407802"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, улица Вавилова, 27",
+                "num_rooms": "3"
+            },
+            "correcting": {
+                "floor": "18",
+                "square_flat": "98.2"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "70030076147500273",
+            "flat_id": "70250201966331093"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, улица Вавилова, 27",
+                "num_rooms": "4"
+            },
+            "correcting": {
+                "floor": "8",
+                "square_flat": "128.4"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "70030076147500273",
+            "flat_id": "70250201981271574"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, улица Вавилова, 27",
+                "num_rooms": "2"
+            },
+            "correcting": {
+                "floor": "8",
+                "square_flat": "68"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "70030076147500273",
+            "flat_id": "70250201980967438"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, улица Вавилова, 27",
+                "num_rooms": "1"
+            },
+            "correcting": {
+                "floor": "19",
+                "square_flat": "47.2"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "70030076147500273",
+            "flat_id": "70250201980953441"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, улица Вавилова, 27",
+                "num_rooms": "3"
+            },
+            "correcting": {
+                "floor": "18",
+                "square_flat": "98.2"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "70030076147500273",
+            "flat_id": "70250201980405113"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, улица Вавилова, 27",
+                "num_rooms": "1"
+            },
+            "correcting": {
+                "floor": "4",
+                "square_flat": "43"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "70030076147500273",
+            "flat_id": "70250201979813441"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, улица Вавилова, 27",
+                "num_rooms": "3"
+            },
+            "correcting": {
+                "floor": "18",
+                "square_flat": "72"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282681202",
+            "flat_id": "70250201981649043"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Гагаринский район, Губкина, 6 к1",
+                "num_rooms": "5"
+            },
+            "correcting": {
+                "floor": "23",
+                "square_flat": "357"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282681202",
+            "flat_id": "70250201981560734"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Гагаринский район, Губкина, 6 к1",
+                "num_rooms": "5"
+            },
+            "correcting": {
+                "floor": "7",
+                "square_flat": "200"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282681202",
+            "flat_id": "70250201978776050"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Гагаринский район, Губкина, 6 к1",
+                "num_rooms": "3"
+            },
+            "correcting": {
+                "floor": "12",
+                "square_flat": "106"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282681202",
+            "flat_id": "70250201978687267"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Гагаринский район, Губкина, 6 к1",
+                "num_rooms": "3"
+            },
+            "correcting": {
+                "floor": "12",
+                "square_flat": "106"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282681202",
+            "flat_id": "70250201978683937"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Гагаринский район, Губкина, 6 к1",
+                "num_rooms": "3"
+            },
+            "correcting": {
+                "floor": "10",
+                "square_flat": "110"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282681202",
+            "flat_id": "70250201967115760"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Гагаринский район, Губкина, 6 к1",
+                "num_rooms": "3"
+            },
+            "correcting": {
+                "floor": "9",
+                "square_flat": "110"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282681202",
+            "flat_id": "70250201966424883"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Гагаринский район, Губкина, 6 к1",
+                "num_rooms": "6"
+            },
+            "correcting": {
+                "floor": "24",
+                "square_flat": "365"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282681202",
+            "flat_id": "70250201966293997"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Гагаринский район, Губкина, 6 к1",
+                "num_rooms": "3"
+            },
+            "correcting": {
+                "floor": "13",
+                "square_flat": "102.6"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282681202",
+            "flat_id": "70250201966290090"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Гагаринский район, Губкина, 6 к1",
+                "num_rooms": "5"
+            },
+            "correcting": {
+                "floor": "23",
+                "square_flat": "357"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282681202",
+            "flat_id": "70250201966285037"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Гагаринский район, Губкина, 6 к1",
+                "num_rooms": "5"
+            },
+            "correcting": {
+                "floor": "23",
+                "square_flat": "360"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282681202",
+            "flat_id": "70250201966276273"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Гагаринский район, Губкина, 6 к1",
+                "num_rooms": "5"
+            },
+            "correcting": {
+                "floor": "23",
+                "square_flat": "356.9"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282681202",
+            "flat_id": "70250201980156530"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Гагаринский район, Губкина, 6 к1",
+                "num_rooms": "5"
+            },
+            "correcting": {
+                "floor": "23",
+                "square_flat": "360"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282681202",
+            "flat_id": "70250201979838789"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Гагаринский район, Губкина, 6 к1",
+                "num_rooms": "3"
+            },
+            "correcting": {
+                "floor": "12",
+                "square_flat": "106"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282681202",
+            "flat_id": "70250201975159904"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Гагаринский район, Губкина, 6 к1",
+                "num_rooms": "3"
+            },
+            "correcting": {
+                "floor": "13",
+                "square_flat": "102.6"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282681202",
+            "flat_id": "70250201975130889"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Гагаринский район, Губкина, 6 к1",
+                "num_rooms": "3"
+            },
+            "correcting": {
+                "floor": "9",
+                "square_flat": "110"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282606049",
+            "flat_id": "70250201981778773"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, улица Вавилова, 37а",
+                "num_rooms": "3"
+            },
+            "correcting": {
+                "floor": "1",
+                "square_flat": "73.9"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282606049",
+            "flat_id": "70250201967090371"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, улица Вавилова, 37а",
+                "num_rooms": "3"
+            },
+            "correcting": {
+                "floor": "2",
+                "square_flat": "74.5"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282606049",
+            "flat_id": "70250201980924450"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, улица Вавилова, 37а",
+                "num_rooms": "3"
+            },
+            "correcting": {
+                "floor": "2",
+                "square_flat": "74.5"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282601324",
+            "flat_id": "70250201975077847"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, улица Дмитрия Ульянова, 10/1 к1",
+                "num_rooms": "2"
+            },
+            "correcting": {
+                "floor": "2",
+                "square_flat": "50"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282601324",
+            "flat_id": "70250201966862164"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, улица Дмитрия Ульянова, 10/1 к1",
+                "num_rooms": "2"
+            },
+            "correcting": {
+                "floor": "2",
+                "square_flat": "50"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282601324",
+            "flat_id": "70250201966348335"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, улица Дмитрия Ульянова, 10/1 к1",
+                "num_rooms": "2"
+            },
+            "correcting": {
+                "floor": "2",
+                "square_flat": "50"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282601324",
+            "flat_id": "70250201979848834"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, улица Дмитрия Ульянова, 10/1 к1",
+                "num_rooms": "2"
+            },
+            "correcting": {
+                "floor": "2",
+                "square_flat": "50"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282601324",
+            "flat_id": "70250201979035479"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, улица Дмитрия Ульянова, 10/1 к1",
+                "num_rooms": "2"
+            },
+            "correcting": {
+                "floor": "2",
+                "square_flat": "50"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282605857",
+            "flat_id": "70250201981415996"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, проспект 60-летия Октября, 19",
+                "num_rooms": "2"
+            },
+            "correcting": {
+                "floor": "7",
+                "square_flat": "64.6"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282605857",
+            "flat_id": "70250201981595227"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, проспект 60-летия Октября, 19",
+                "num_rooms": "2"
+            },
+            "correcting": {
+                "floor": "2",
+                "square_flat": "65"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282605857",
+            "flat_id": "70250201981143725"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, проспект 60-летия Октября, 19",
+                "num_rooms": "2"
+            },
+            "correcting": {
+                "floor": "15",
+                "square_flat": "64"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282605857",
+            "flat_id": "70250201966927576"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, проспект 60-летия Октября, 19",
+                "num_rooms": "5"
+            },
+            "correcting": {
+                "floor": "17",
+                "square_flat": "127.1"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282605857",
+            "flat_id": "70250201966578087"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, проспект 60-летия Октября, 19",
+                "num_rooms": "3"
+            },
+            "correcting": {
+                "floor": "2",
+                "square_flat": "77.1"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282605857",
+            "flat_id": "70250201966329066"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, проспект 60-летия Октября, 19",
+                "num_rooms": "2"
+            },
+            "correcting": {
+                "floor": "7",
+                "square_flat": "64.6"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282570604",
+            "flat_id": "70250201981077736"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, улица Гримау, 5/1 к1",
+                "num_rooms": "3"
+            },
+            "correcting": {
+                "floor": "2",
+                "square_flat": "80"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282570604",
+            "flat_id": "70250201971168159"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, улица Гримау, 5/1 к1",
+                "num_rooms": "3"
+            },
+            "correcting": {
+                "floor": "2",
+                "square_flat": "76.7"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282570604",
+            "flat_id": "70250201971118927"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, улица Гримау, 5/1 к1",
+                "num_rooms": "3"
+            },
+            "correcting": {
+                "floor": "2",
+                "square_flat": "77"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282570604",
+            "flat_id": "70250201967014726"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, улица Гримау, 5/1 к1",
+                "num_rooms": "3"
+            },
+            "correcting": {
+                "floor": "2",
+                "square_flat": "76.6"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282570604",
+            "flat_id": "70250201966287280"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, улица Гримау, 5/1 к1",
+                "num_rooms": "3"
+            },
+            "correcting": {
+                "floor": "2",
+                "square_flat": "76"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282570604",
+            "flat_id": "70250201981268158"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, улица Гримау, 5/1 к1",
+                "num_rooms": "3"
+            },
+            "correcting": {
+                "floor": "2",
+                "square_flat": "77"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282570604",
+            "flat_id": "70250201979848040"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, улица Гримау, 5/1 к1",
+                "num_rooms": "3"
+            },
+            "correcting": {
+                "floor": "2",
+                "square_flat": "76.7"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282570604",
+            "flat_id": "70250201978983416"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, улица Гримау, 5/1 к1",
+                "num_rooms": "3"
+            },
+            "correcting": {
+                "floor": "2",
+                "square_flat": "76"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282570744",
+            "flat_id": "70250201978802106"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, проспект 60-летия Октября, 25 к2",
+                "num_rooms": "2"
+            },
+            "correcting": {
+                "floor": "2",
+                "square_flat": "39.1"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282570744",
+            "flat_id": "70250201971196013"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, проспект 60-летия Октября, 25 к2",
+                "num_rooms": "1"
+            },
+            "correcting": {
+                "floor": "1",
+                "square_flat": "31"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282605934",
+            "flat_id": "70250201966381314"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, Ферсмана, 1 к1",
+                "num_rooms": "2"
+            },
+            "correcting": {
+                "floor": "3",
+                "square_flat": "61"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282605934",
+            "flat_id": "70250201980991094"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, Ферсмана, 1 к1",
+                "num_rooms": "3"
+            },
+            "correcting": {
+                "floor": "2",
+                "square_flat": "79"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282605934",
+            "flat_id": "70250201980392294"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, Ферсмана, 1 к1",
+                "num_rooms": "2"
+            },
+            "correcting": {
+                "floor": "3",
+                "square_flat": "61"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282605934",
+            "flat_id": "70250201980173131"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, Ферсмана, 1 к1",
+                "num_rooms": "2"
+            },
+            "correcting": {
+                "floor": "3",
+                "square_flat": "61"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282569442",
+            "flat_id": "70250201966347593"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, улица Дмитрия Ульянова, 8 к2",
+                "num_rooms": "1"
+            },
+            "correcting": {
+                "floor": "1",
+                "square_flat": "30.1"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282569442",
+            "flat_id": "70250201981050586"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, улица Дмитрия Ульянова, 8 к2",
+                "num_rooms": "1"
+            },
+            "correcting": {
+                "floor": "1",
+                "square_flat": "30.1"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282569442",
+            "flat_id": "70250201980804515"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, улица Дмитрия Ульянова, 8 к2",
+                "num_rooms": "1"
+            },
+            "correcting": {
+                "floor": "1",
+                "square_flat": "30.1"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282608010",
+            "flat_id": "70250201981548756"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Гагаринский район, Ленинский проспект, 52",
+                "num_rooms": "1"
+            },
+            "correcting": {
+                "floor": "1",
+                "square_flat": "33.2"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282608010",
+            "flat_id": "70250201981223618"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Гагаринский район, Ленинский проспект, 52",
+                "num_rooms": "3"
+            },
+            "correcting": {
+                "floor": "3",
+                "square_flat": "75.9"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282608010",
+            "flat_id": "70250201966938803"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Гагаринский район, Ленинский проспект, 52",
+                "num_rooms": "2"
+            },
+            "correcting": {
+                "floor": "2",
+                "square_flat": "53.5"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282608010",
+            "flat_id": "70250201966667094"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Гагаринский район, Ленинский проспект, 52",
+                "num_rooms": "3"
+            },
+            "correcting": {
+                "floor": "3",
+                "square_flat": "77"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282608010",
+            "flat_id": "70250201966295020"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Гагаринский район, Ленинский проспект, 52",
+                "num_rooms": "2"
+            },
+            "correcting": {
+                "floor": "5",
+                "square_flat": "59.6"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282608010",
+            "flat_id": "70250201966282284"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Гагаринский район, Ленинский проспект, 52",
+                "num_rooms": "2"
+            },
+            "correcting": {
+                "floor": "5",
+                "square_flat": "63.4"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235283037024",
+            "flat_id": "70250201978783877"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, улица Гримау, 9 к1",
+                "num_rooms": "1"
+            },
+            "correcting": {
+                "floor": "11",
+                "square_flat": "35.3"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235283037024",
+            "flat_id": "70250201967947041"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, улица Гримау, 9 к1",
+                "num_rooms": "1"
+            },
+            "correcting": {
+                "floor": "6",
+                "square_flat": "40"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235283037024",
+            "flat_id": "70250201966896002"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, улица Гримау, 9 к1",
+                "num_rooms": "2"
+            },
+            "correcting": {
+                "floor": "6",
+                "square_flat": "56"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235283037024",
+            "flat_id": "70250201980395314"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, улица Гримау, 9 к1",
+                "num_rooms": "1"
+            },
+            "correcting": {
+                "floor": "6",
+                "square_flat": "40"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282570802",
+            "flat_id": "70250201978714856"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, улица Дмитрия Ульянова, 17 к1",
+                "num_rooms": "3"
+            },
+            "correcting": {
+                "floor": "2",
+                "square_flat": "55.2"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282570802",
+            "flat_id": "70250201978689347"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, улица Дмитрия Ульянова, 17 к1",
+                "num_rooms": "3"
+            },
+            "correcting": {
+                "floor": "1",
+                "square_flat": "57"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282570802",
+            "flat_id": "70250201967006302"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, улица Дмитрия Ульянова, 17 к1",
+                "num_rooms": "1"
+            },
+            "correcting": {
+                "floor": "1",
+                "square_flat": "30"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282570842",
+            "flat_id": "70250201966749540"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, Ферсмана, 13 к1",
+                "num_rooms": "1"
+            },
+            "correcting": {
+                "floor": "2",
+                "square_flat": "29.4"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282570842",
+            "flat_id": "70250201966408801"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, Ферсмана, 13 к1",
+                "num_rooms": "3"
+            },
+            "correcting": {
+                "floor": "5",
+                "square_flat": "58.3"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282570842",
+            "flat_id": "70250201980985409"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, Ферсмана, 13 к1",
+                "num_rooms": "3"
+            },
+            "correcting": {
+                "floor": "5",
+                "square_flat": "58.3"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282570737",
+            "flat_id": "70250201981338141"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, улица Гримау, 14",
+                "num_rooms": "1"
+            },
+            "correcting": {
+                "floor": "2",
+                "square_flat": "35.3"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282570737",
+            "flat_id": "70250201981301540"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, улица Гримау, 14",
+                "num_rooms": "1"
+            },
+            "correcting": {
+                "floor": "4",
+                "square_flat": "33.4"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282570737",
+            "flat_id": "70250201975039213"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, улица Гримау, 14",
+                "num_rooms": "3"
+            },
+            "correcting": {
+                "floor": "3",
+                "square_flat": "55"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282570606",
+            "flat_id": "70250201981601985"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, Шверника, 8/1 к1",
+                "num_rooms": "2"
+            },
+            "correcting": {
+                "floor": "5",
+                "square_flat": "53"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "70030076177370941",
+            "flat_id": "70250201967044550"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, Шверника, 6 к2",
+                "num_rooms": "1"
+            },
+            "correcting": {
+                "floor": "3",
+                "square_flat": "39"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "70030076177370941",
+            "flat_id": "70250201966574279"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, Шверника, 6 к2",
+                "num_rooms": "2"
+            },
+            "correcting": {
+                "floor": "3",
+                "square_flat": "57"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "70030076177370941",
+            "flat_id": "70250201980026082"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, Шверника, 6 к2",
+                "num_rooms": "2"
+            },
+            "correcting": {
+                "floor": "6",
+                "square_flat": "55"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "70030076177370941",
+            "flat_id": "70250201979809545"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, Шверника, 6 к2",
+                "num_rooms": "2"
+            },
+            "correcting": {
+                "floor": "6",
+                "square_flat": "54.7"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282605981",
+            "flat_id": "70250201981724484"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, проспект 60-летия Октября, 8",
+                "num_rooms": "3"
+            },
+            "correcting": {
+                "floor": "17",
+                "square_flat": "130"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282605981",
+            "flat_id": "70250201981380234"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, проспект 60-летия Октября, 8",
+                "num_rooms": "3"
+            },
+            "correcting": {
+                "floor": "15",
+                "square_flat": "102"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282605981",
+            "flat_id": "70250201981226156"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, проспект 60-летия Октября, 8",
+                "num_rooms": "4"
+            },
+            "correcting": {
+                "floor": "17",
+                "square_flat": "130"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282605981",
+            "flat_id": "70250201981152879"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, проспект 60-летия Октября, 8",
+                "num_rooms": "4"
+            },
+            "correcting": {
+                "floor": "18",
+                "square_flat": "140"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282605981",
+            "flat_id": "70250201966407656"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, проспект 60-летия Октября, 8",
+                "num_rooms": "3"
+            },
+            "correcting": {
+                "floor": "23",
+                "square_flat": "115"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282582436",
+            "flat_id": "70250201981665207"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, Шверника, 1 к1",
+                "num_rooms": "2"
+            },
+            "correcting": {
+                "floor": "11",
+                "square_flat": "40"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282582436",
+            "flat_id": "70250201967128599"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, Шверника, 1 к1",
+                "num_rooms": "2"
+            },
+            "correcting": {
+                "floor": "11",
+                "square_flat": "40"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282582436",
+            "flat_id": "70250201966719422"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, Шверника, 1 к1",
+                "num_rooms": "1"
+            },
+            "correcting": {
+                "floor": "6",
+                "square_flat": "41"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282582436",
+            "flat_id": "70250201980708298"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, Шверника, 1 к1",
+                "num_rooms": "2"
+            },
+            "correcting": {
+                "floor": "8",
+                "square_flat": "37.8"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282582420",
+            "flat_id": "70250201981758759"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, улица Вавилова, 25",
+                "num_rooms": "2"
+            },
+            "correcting": {
+                "floor": "8",
+                "square_flat": "54"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282582420",
+            "flat_id": "70250201966392570"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, улица Вавилова, 25",
+                "num_rooms": "3"
+            },
+            "correcting": {
+                "floor": "10",
+                "square_flat": "73.4"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282582420",
+            "flat_id": "70250201980934108"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, улица Вавилова, 25",
+                "num_rooms": "3"
+            },
+            "correcting": {
+                "floor": "10",
+                "square_flat": "73.4"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282582420",
+            "flat_id": "70250201979807824"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, улица Вавилова, 25",
+                "num_rooms": "1"
+            },
+            "correcting": {
+                "floor": "12",
+                "square_flat": "40"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282605561",
+            "flat_id": "70250201967090623"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, Шверника, 5",
+                "num_rooms": "3"
+            },
+            "correcting": {
+                "floor": "11",
+                "square_flat": "84"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282605561",
+            "flat_id": "70250201966567097"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, Шверника, 5",
+                "num_rooms": "1"
+            },
+            "correcting": {
+                "floor": "8",
+                "square_flat": "35.9"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282605561",
+            "flat_id": "70250201980761292"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, Шверника, 5",
+                "num_rooms": "1"
+            },
+            "correcting": {
+                "floor": "8",
+                "square_flat": "35.9"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282582416",
+            "flat_id": "70250201967922300"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, Ферсмана, 1 к2",
+                "num_rooms": "1"
+            },
+            "correcting": {
+                "floor": "1",
+                "square_flat": "32.6"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282582416",
+            "flat_id": "70250201966319689"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, Ферсмана, 1 к2",
+                "num_rooms": "3"
+            },
+            "correcting": {
+                "floor": "4",
+                "square_flat": "57.7"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282582416",
+            "flat_id": "70250201975211605"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, Ферсмана, 1 к2",
+                "num_rooms": "1"
+            },
+            "correcting": {
+                "floor": "1",
+                "square_flat": "32.6"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282606093",
+            "flat_id": "70250201981654282"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, улица Вавилова, 47 к1",
+                "num_rooms": "2"
+            },
+            "correcting": {
+                "floor": "4",
+                "square_flat": "63.4"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282606093",
+            "flat_id": "70250201966421235"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, улица Вавилова, 47 к1",
+                "num_rooms": "2"
+            },
+            "correcting": {
+                "floor": "1",
+                "square_flat": "77"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282606093",
+            "flat_id": "70250201978988738"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, улица Вавилова, 47 к1",
+                "num_rooms": "2"
+            },
+            "correcting": {
+                "floor": "1",
+                "square_flat": "77"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282606116",
+            "flat_id": "70250201967922199"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, улица Вавилова, 55/7",
+                "num_rooms": "2"
+            },
+            "correcting": {
+                "floor": "3",
+                "square_flat": "64.1"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282606116",
+            "flat_id": "70250201966623187"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, улица Вавилова, 55/7",
+                "num_rooms": "3"
+            },
+            "correcting": {
+                "floor": "6",
+                "square_flat": "80.8"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282606116",
+            "flat_id": "70250201980407693"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, улица Вавилова, 55/7",
+                "num_rooms": "2"
+            },
+            "correcting": {
+                "floor": "3",
+                "square_flat": "64.1"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282604755",
+            "flat_id": "70250201966770344"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, улица Винокурова, 2",
+                "num_rooms": "2"
+            },
+            "correcting": {
+                "floor": "2",
+                "square_flat": "56"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282604755",
+            "flat_id": "70250201981126406"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, улица Винокурова, 2",
+                "num_rooms": "2"
+            },
+            "correcting": {
+                "floor": "2",
+                "square_flat": "56"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282570821",
+            "flat_id": "70250201966728863"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, проспект 60-летия Октября, 16 к3",
+                "num_rooms": "1"
+            },
+            "correcting": {
+                "floor": "1",
+                "square_flat": "30"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282570821",
+            "flat_id": "70250201980024074"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, проспект 60-летия Октября, 16 к3",
+                "num_rooms": "1"
+            },
+            "correcting": {
+                "floor": "1",
+                "square_flat": "30"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282582414",
+            "flat_id": "70250201966700246"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, Ферсмана, 5 к1",
+                "num_rooms": "2"
+            },
+            "correcting": {
+                "floor": "4",
+                "square_flat": "44"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282582414",
+            "flat_id": "70250201980918156"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, Ферсмана, 5 к1",
+                "num_rooms": "1"
+            },
+            "correcting": {
+                "floor": "7",
+                "square_flat": "32"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282570845",
+            "flat_id": "70250201981216120"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, Ферсмана, 11 к1",
+                "num_rooms": "3"
+            },
+            "correcting": {
+                "floor": "4",
+                "square_flat": "53.2"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282569438",
+            "flat_id": "70250201968006896"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, улица Дмитрия Ульянова, 12 к1",
+                "num_rooms": "1"
+            },
+            "correcting": {
+                "floor": "3",
+                "square_flat": "32.4"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282569438",
+            "flat_id": "70250201981124784"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, улица Дмитрия Ульянова, 12 к1",
+                "num_rooms": "1"
+            },
+            "correcting": {
+                "floor": "3",
+                "square_flat": "32.4"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282582018",
+            "flat_id": "70250201978745210"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, Губкина, 7",
+                "num_rooms": "2"
+            },
+            "correcting": {
+                "floor": "14",
+                "square_flat": "52.3"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282582018",
+            "flat_id": "70250201981277014"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, Губкина, 7",
+                "num_rooms": "2"
+            },
+            "correcting": {
+                "floor": "14",
+                "square_flat": "52.4"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282601470",
+            "flat_id": "70250201981786314"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, Ивана Бабушкина, 4 к1",
+                "num_rooms": "1"
+            },
+            "correcting": {
+                "floor": "9",
+                "square_flat": "44.6"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282601470",
+            "flat_id": "70250201966451649"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, Ивана Бабушкина, 4 к1",
+                "num_rooms": "1"
+            },
+            "correcting": {
+                "floor": "8",
+                "square_flat": "41"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282605528",
+            "flat_id": "70250201981646756"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, Шверника, 3 к1",
+                "num_rooms": "2"
+            },
+            "correcting": {
+                "floor": "10",
+                "square_flat": "74"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282582437",
+            "flat_id": "70250201981550717"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, Шверника, 1 к4",
+                "num_rooms": "4"
+            },
+            "correcting": {
+                "floor": "4",
+                "square_flat": "81"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282570751",
+            "flat_id": "70250201980939819"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, проспект 60-летия Октября, 23 к2",
+                "num_rooms": "2"
+            },
+            "correcting": {
+                "floor": "2",
+                "square_flat": "38.3"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282570758",
+            "flat_id": "70250201967033294"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, Шверника, 2 к1",
+                "num_rooms": "2"
+            },
+            "correcting": {
+                "floor": "3",
+                "square_flat": "44.1"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282570819",
+            "flat_id": "70250201966275956"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, проспект 60-летия Октября, 16 к4",
+                "num_rooms": "1"
+            },
+            "correcting": {
+                "floor": "4",
+                "square_flat": "32"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282570826",
+            "flat_id": "70250201966690101"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, Черёмушкинский проезд, 3 к1",
+                "num_rooms": "2"
+            },
+            "correcting": {
+                "floor": "5",
+                "square_flat": "43.4"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282570823",
+            "flat_id": "70250201981397721"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, проспект 60-летия Октября, 18 к3",
+                "num_rooms": "2"
+            },
+            "correcting": {
+                "floor": "2",
+                "square_flat": "43.5"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282570805",
+            "flat_id": "70250201980745736"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, улица Дмитрия Ульянова, 17 к2",
+                "num_rooms": "1"
+            },
+            "correcting": {
+                "floor": "4",
+                "square_flat": "32.3"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282570844",
+            "flat_id": "70250201975183623"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, Ферсмана, 11 к2",
+                "num_rooms": "2"
+            },
+            "correcting": {
+                "floor": "5",
+                "square_flat": "40"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282582417",
+            "flat_id": "70250201966327172"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, улица Вавилова, 31 к1",
+                "num_rooms": "2"
+            },
+            "correcting": {
+                "floor": "5",
+                "square_flat": "54"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282606036",
+            "flat_id": "70250201980720823"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, Ферсмана, 11",
+                "num_rooms": "3"
+            },
+            "correcting": {
+                "floor": "5",
+                "square_flat": "123"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282569632",
+            "flat_id": "70250201966267548"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, улица Дмитрия Ульянова, 9/11 к1",
+                "num_rooms": "1"
+            },
+            "correcting": {
+                "floor": "2",
+                "square_flat": "32"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282569431",
+            "flat_id": "70250201966795646"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, улица Дмитрия Ульянова, 10/1 к2",
+                "num_rooms": "1"
+            },
+            "correcting": {
+                "floor": "2",
+                "square_flat": "33.4"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282606077",
+            "flat_id": "70250201980922206"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Академический район, улица Вавилова, 49 к1",
+                "num_rooms": "2"
+            },
+            "correcting": {
+                "floor": "2",
+                "square_flat": "49"
+            }
+        }
+    },
+    {
+        "meta": {
+            "building_id": "4504235282607611",
+            "flat_id": "70250201967093237"
+        },
+        "content": {
+            "needed": {
+                "address": "Москва, Гагаринский район, улица Вавилова, 46",
+                "num_rooms": "3"
+            },
+            "correcting": {
+                "floor": "6",
+                "square_flat": "53.7"
+            }
+        }
+    }
+]
