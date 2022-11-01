@@ -74,10 +74,10 @@ def get_info_buildings(buildings_id):
 
 
 def api_parser(main_flat):
-    x_coord, y_coord, geo_id = get_coords_by_address(main_flat.address)
+    x_coord, y_coord, geo_id = get_coords_by_address(main_flat['address'])
     x, y = get_rectangle_bounds([x_coord, y_coord])
     markers = get_markers(x, y)
-    buildings = get_buildings(x, y)
+    buildings = get_buildings(x, y, markers)
     info_buildings = get_info_buildings(','.join(j['building_id'] for j in markers))
     # exit()
     flats = []
@@ -124,7 +124,7 @@ def api_parser(main_flat):
                         'nearest_station': ''
                     }
                 }
-            if check_is_analog(flat['content']['needed'], main_flat):
+            if check_is_analog(flat['content']['required'], main_flat):
                 flats.append(flat)
         flats.extend(flats_in_building)
     return flats

@@ -37,7 +37,7 @@ def correct_floors(analog, main_flat):
 
 def correct_apartment_area(analog, main_flat):
     correction = 0
-    config = main_config['the area of the apartment']
+    config = main_config['apartment area']
     if main_flat['square_flat'] < 30:
         if analog['correcting']['square_flat'] < 30:
             correction = config['<30']['<30']
@@ -118,7 +118,7 @@ def correct_kitchen_area(analog, main_flat):
 
 def correct_balcony(analog, main_flat):
     correction = 0
-    config = main_config['the presence of a balcony / loggia']
+    config = main_config['balcony / loggia']
     if main_flat['floor'] == 1:
         if analog['correcting']['floor'] == 1:
             correction = config['first floor']['ff']
@@ -145,7 +145,7 @@ def correct_balcony(analog, main_flat):
 
 def correct_metro(analog, main_flat):
     correction = 0
-    config = main_config['apartament floor']
+    config = main_config['metro']
     if main_flat['floor'] == 1:
         if analog['correcting']['floor'] == 1:
             correction = config['first floor']['ff']
