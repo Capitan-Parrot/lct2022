@@ -58,6 +58,7 @@ def get_flat_params(url, driver):
 
     return list1
 
+
 if __name__ == '__main__':
 
     x, y = get_rectangle_bounds([55.697965, 37.579133])
