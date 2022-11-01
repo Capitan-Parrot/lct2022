@@ -1,7 +1,7 @@
 import os
 import requests
 import json
-from backend.getRectangle import get_rectangle_bounds
+from backend.utils.getRectangle import get_rectangle_bounds
 from dotenv import load_dotenv
 
 

@@ -4,11 +4,10 @@ from starlette.middleware.cors import CORSMiddleware
 
 from fastapi import FastAPI
 import uvicorn
-from starlette.staticfiles import StaticFiles
 
 from .sql_app import models
 from .sql_app.database import engine
-from .priceByCityDistrict import Parser
+from backend.utils.priceByCityDistrict import Parser
 from .routes.index import router
 
 logging.basicConfig(format="%(asctime)s [%(name)s] - %(levelname)s: %(message)s", level=logging.INFO)
