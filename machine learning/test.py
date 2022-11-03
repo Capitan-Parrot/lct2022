@@ -1,18 +1,11 @@
 #1. Loading BeautifulSoup and test request
 import asyncio
-
-import grequests
 from bs4 import BeautifulSoup
-import requests
 import ssl
-from pprint import pprint
-
 import requests
 from requests.adapters import HTTPAdapter
 from requests.packages.urllib3.poolmanager import PoolManager
 from requests.packages.urllib3.util import ssl_
-from concurrent.futures import as_completed
-from requests_futures.sessions import FuturesSession
 
 
 class TlsAdapter(HTTPAdapter):
@@ -26,7 +19,7 @@ class TlsAdapter(HTTPAdapter):
         ctx = ssl_.create_urllib3_context(ciphers=CIPHERS, cert_reqs=ssl.CERT_REQUIRED, options=self.ssl_options)
         self.poolmanager = PoolManager(*pool_args, ssl_context=ctx, **pool_kwargs)
 
-#
+
 session = requests.session()
 adapter = TlsAdapter(ssl.OP_NO_TLSv1 | ssl.OP_NO_TLSv1_1)
 session.mount("https://", adapter)
