@@ -1,16 +1,10 @@
 import os
 import time
-
 import grequests
 import requests
-import json
 
 from backend.utils.checkIsAnalog import check_is_analog
 from backend.utils.getRectangle import get_rectangle_bounds
-from dotenv import load_dotenv
-
-
-# Start
 
 
 def get_coords_by_address(address):
@@ -142,6 +136,5 @@ def parse_2gis(base_flats=None):
 
 
 if __name__ == '__main__':
-    load_dotenv()
     tick = time.time()
     print(time.time() - tick)
