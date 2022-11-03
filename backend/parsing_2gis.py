@@ -73,20 +73,19 @@ def get_info_buildings(buildings_id):
     return response.json()
 
 
-def api_parser(main_flat):
-    x_coord, y_coord, geo_id = get_coords_by_address(main_flat['address'])
+def api_parser(base_flats):
+    x_coord, y_coord, geo_id = get_coords_by_address(base_flats[base_flats.keys()[0]]['address'])
     x, y = get_rectangle_bounds([x_coord, y_coord])
     markers = get_markers(x, y)
     buildings = get_buildings(x, y, markers)
     info_buildings = get_info_buildings(','.join(j['building_id'] for j in markers))
     # exit()
-    flats = []
+    flats = {}
     for building in buildings:
         # data['geo_id'] = building['building_id']
         # url = "https://market-backend.api.2gis.ru/5.0/realty/items?"
         # response = requests.get(url, params=data)
         res = building.json()['result']['items']
-        flats_in_building = []
         for i in range(len(res)):
             if res[i]['product']['attributes'][0]['value'] != 'Квартира':
                 continue
@@ -128,22 +127,21 @@ def api_parser(main_flat):
                         'condition': ''
                     }
                 }
-            if check_is_analog(flat['content']['required'], main_flat):
-                flats.append(flat)
-        flats.extend(flats_in_building)
+            if check_is_analog(flat['content']['required'], base_flats['content']['required']['num_rooms']):
+                flats[flat['content']['required']['num_rooms']].append(flat)
     return flats
 
 
-def parse_2gis(main_flat=None):
-    if main_flat is None:
-        main_flat = {'address': 'Москва, Ферсмана, 3 к1'}
-    data = api_parser(main_flat)
-    with open('data.json', 'w', encoding='utf-8') as outfile:
-        json.dump(data, outfile, indent=4, ensure_ascii=False)
+def parse_2gis(base_flats=None):
+    if base_flats is None:
+        base_flats = [{'num_rooms': 1, 'address': 'Москва, Ферсмана, 3 к1'}]
+    data = api_parser(base_flats)
+    return data
+    # with open('data.json', 'w', encoding='utf-8') as outfile:
+    #     json.dump(data, outfile, indent=4, ensure_ascii=False)
 
 
 if __name__ == '__main__':
     load_dotenv()
     tick = time.time()
-    parse_2gis()
     print(time.time() - tick)

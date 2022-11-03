@@ -1,7 +1,7 @@
 import json
 
 import backend.utils.getScores as getScores
-from parsing_2gis import parse_2gis
+from backend.parsing_2gis import parse_2gis
 
 
 def get_scores(analog, main_flat):
@@ -15,24 +15,27 @@ def get_scores(analog, main_flat):
     return corrections
 
 
-def find_analogs(main_flat):
-    all_analogs = parse_2gis(main_flat['address'])
-    for analog in all_analogs:
-        corrections = get_scores(analog['content'], main_flat)
-        analog['correction'] = corrections | {'final_correction': sum(percent for percent in corrections.values())}
-    return sorted(all_analogs, key=lambda curr_analog: -curr_analog['correction']['final_correction'])[:10]
+def find_analogs(base_flat):
+    all_analogs = parse_2gis(base_flat['address'])
+    result = {}
+    for num_room_category in all_analogs:
+        for analog in all_analogs[num_room_category]:
+            corrections = get_scores(analog['content'], base_flat)
+            analog['correction'] = corrections | {'final_correction': sum(percent for percent in corrections.values())}
+        all_analogs[num_room_category] = sorted(all_analogs[num_room_category],
+                                                key=lambda curr_analog:
+                                                -curr_analog['correction']['final_correction'])[:10]
+    return all_analogs
 
 
-def calculate_cost(flats):
-    return None
-
-
-def create_file(flats):
-    return None
-
-
-def save_file(flats):
-    return None
+def calculate_cost(flats, base_flats):
+    for flat in flats:
+        corrections = get_scores(flat, base_flats[flat['num_rooms']])
+        curr_price = base_flats['base_price']
+        for correction in corrections:
+            curr_price *= correction
+        flat['price'] = flat['apartment area'] * curr_price
+    return flats
 
 
 # if __name__ == '__main__':

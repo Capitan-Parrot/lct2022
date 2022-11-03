@@ -8,7 +8,7 @@ import string
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
 
-def create_user(db: Session, user: schemas.UserCreate):
+def create_user(db: Session, user: schemas.User):
     alphabet = string.ascii_letters + string.digits
     password = ''.join(secrets.choice(alphabet) for i in range(20))  # for a 20-character password
     hashed_password = get_password_hash(password)
@@ -20,7 +20,7 @@ def create_user(db: Session, user: schemas.UserCreate):
     return db_user, password
 
 
-def create_register_request(db: Session, user: schemas.RegisterUserCreate):
+def create_register_request(db: Session, user: schemas.RegisterUserRequest):
     db_register_request = models.RegisterRequest(**user.dict())
     db.add(db_register_request)
     db.commit()
@@ -28,7 +28,7 @@ def create_register_request(db: Session, user: schemas.RegisterUserCreate):
     return db_register_request
 
 
-def authenticate_user(db: Session, user: schemas.LoginUserBase):
+def authenticate_user(db: Session, user: schemas.LoginUserRequest):
     user = get_user_by_email(db, user.email)
     if not user:
         return False

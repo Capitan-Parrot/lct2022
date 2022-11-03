@@ -47,3 +47,9 @@ class Flat(BaseModel):
     has_balcony: bool
     metro_distance: int
     condition: str
+
+
+class FlatRequest(BaseModel):
+    flats_prices: list[float]
+    filename: str
+

@@ -34,8 +34,8 @@ app.include_router(router)
 async def root():
     return {"message": "ok"}
 
-parser = Parser()
-parser.start()
+# parser = Parser()
+# parser.start()
 
 if __name__ == '__main__':
     uvicorn.run(app, host="0.0.0.0", port=8000)
