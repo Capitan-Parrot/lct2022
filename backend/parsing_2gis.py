@@ -3,8 +3,8 @@ import time
 import grequests
 import requests
 
-from backend.utils.checkIsAnalog import check_is_analog
-from backend.utils.getRectangle import get_rectangle_bounds
+from .utils.checkIsAnalog import check_is_analog
+from .utils.getRectangle import get_rectangle_bounds
 
 
 def get_coords_by_address(address):

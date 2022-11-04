@@ -1,7 +1,5 @@
-import json
-
-import backend.utils.getScores as getScores
-from backend.parsing_2gis import parse_2gis
+from .utils import getScores
+from .parsing_2gis import parse_2gis
 
 
 def get_scores(analog, main_flat):

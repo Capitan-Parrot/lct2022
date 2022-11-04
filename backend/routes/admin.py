@@ -1,9 +1,10 @@
 from fastapi import APIRouter, Depends, BackgroundTasks
+from fastapi.encoders import jsonable_encoder
 from sqlalchemy.orm import Session
 
 from ..sql_app import crud, schemas
 from ..sql_app.database import get_db
-from backend.MailService import send_email
+from ..MailService import send_email
 
 
 adminRouter = APIRouter(prefix="/admin",
@@ -22,11 +23,13 @@ async def get_all_users(skip: int = 0, limit: int = 100, db: Session = Depends(g
     return users
 
 
-@adminRouter.post("/createUser/{register_id}", response_model=schemas.User)
+@adminRouter.post("/createUser/{register_id}", response_model=schemas.LoginUserOut)
 async def register(register_id: int, background_tasks: BackgroundTasks, db: Session = Depends(get_db)):
-    user = crud.get_register_request(db, register_id)
-    user, user_password = crud.create_user(db, user)
+    user_request = crud.get_register_request(db, register_id)
+    if not user_request:
+        raise HTTPException(status_code=400, detail="Запрос на регистрацию не актуален")
+    user, user_password = crud.create_user(db, user_request)
     send_email(background_tasks, 'Ваши данные для входа',
-               user.email, {'title': 'Данные для входа', 'name': user.name, 'password': user_password})
-    return user, user_password
+               user.email, {'email': user.email, 'password': user_password})
+    return {'user': user, 'password': user_password}
 

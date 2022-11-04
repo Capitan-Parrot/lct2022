@@ -20,15 +20,21 @@ class LoginUserRequest(BaseModel):
 
 
 class User(BaseModel):
+    id: int
     name: str
     email: str
     role: str
     hashed_password: str
-    id: int
+    work_counter: int
     is_banned: bool
 
     class Config:
         orm_mode = True
+
+
+class LoginUserOut(BaseModel):
+    user: User
+    password: str
 
 
 class RegisterUserRequest(BaseModel):

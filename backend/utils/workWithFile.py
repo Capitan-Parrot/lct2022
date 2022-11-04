@@ -3,7 +3,7 @@ import pandas as pd
 import xlrd
 from xlutils.copy import copy
 
-from backend.sql_app import schemas
+from ..sql_app import schemas
 
 
 async def get_flats_from_excel_file(file):

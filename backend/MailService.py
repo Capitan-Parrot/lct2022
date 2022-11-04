@@ -22,18 +22,20 @@ conf = ConnectionConfig(
     MAIL_STARTTLS=True,
     MAIL_SSL_TLS=False,
     USE_CREDENTIALS=True,
-    VALIDATE_CERTS=True
+    VALIDATE_CERTS=True,
+    TEMPLATE_FOLDER='frontend'
 )
 
 
 def send_email(background_tasks: BackgroundTasks, subject: str, email_to: str, body: dict):
+    print(email_to, subject, body)
     message = MessageSchema(
         subject=subject,
         recipients=[email_to],
-        body=body,
-        subtype='html',
+        template_body=body,
+        subtype='html'
     )
     fm = FastMail(conf)
     background_tasks.add_task(
-        fm.send_message, message, template_name='frontend/email.html')
+        fm.send_message, message, template_name='email.html')
 
