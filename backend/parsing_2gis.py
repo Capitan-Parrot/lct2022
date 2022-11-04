@@ -20,7 +20,10 @@ def get_coords_by_address(address):
         'key': os.getenv('2GIS_KEY')
     }
     url = 'https://catalog.api.2gis.com/3.0/items/geocode?'
-    response = requests.get(url, params=data)
+    for key, value in data.items():
+        url += key + "=" + value + "&"
+    url = url[:-1]
+    response = requests.get(url)
     res = response.json()['result']['items'][0]
     x_coord, y_coord, geo_id = res['point']['lat'], res['point']['lon'], res['id'].split('_')[0]
     return x_coord, y_coord, geo_id
@@ -68,7 +71,7 @@ def get_info_buildings(buildings_id):
         'fields': "items.locale,items.flags,search_attributes,items.adm_div,items.city_alias,items.region_id,items.segment_id,items.reviews,items.point,request_type,context_rubrics,query_context,items.links,items.name_ex,items.org,items.group,items.dates,items.external_content,items.contact_groups,items.comment,items.ads.options,items.email_for_sending.allowed,items.stat,items.stop_factors,items.description,items.geometry.centroid,items.geometry.selection,items.geometry.style,items.timezone_offset,items.context,items.level_count,items.address,items.is_paid,items.access,items.access_comment,items.for_trucks,items.is_incentive,items.paving_type,items.capacity,items.schedule,items.floors,ad,items.rubrics,items.routes,items.platforms,items.directions,items.barrier,items.reply_rate,items.purpose,items.attribute_groups,items.route_logo,items.has_goods,items.has_apartments_info,items.has_pinned_goods,items.has_realty,items.has_exchange,items.has_payments,items.has_dynamic_congestion,items.is_promoted,items.congestion,items.delivery,items.order_with_cart,search_type,items.has_discount,items.metarubrics,broadcast,items.detailed_subtype,items.temporary_unavailable_atm_services,items.poi_category,items.structure_info.material,items.structure_info.floor_type,items.structure_info.gas_type,items.structure_info.year_of_construction,items.structure_info.elevators_count,items.structure_info.is_in_emergency_state,items.structure_info.project_type",
         "id": buildings_id
     }
-    url = "https://catalog.api.2gis.com/3.0/items/byid?"
+    url = "https://catalog.api.2gis.com/3.0/items/byid"
     response = requests.get(url, params=data)
     return response.json()
 
@@ -79,7 +82,13 @@ def api_parser(main_flat):
     markers = get_markers(x, y)
     buildings = get_buildings(x, y, markers)
     info_buildings = get_info_buildings(','.join(j['building_id'] for j in markers))
-    # exit()
+    subways = []
+    for i in range(len(info_buildings)):
+        closest_subway = (info_buildings[i]['result']['items']['links']['nearest_stations'][0]['name'], info_buildings[i]['result']['items']['links']['nearest_stations'][0]['distance'])    
+        for i in info_buildings[i]['result']['items']['links']['nearest_stations']:
+            if i['distance'] < closest_subway[1]:
+                closest_subway = (i['name'], i['distance'])
+        subways.append(closest_subway)
     flats = []
     for building in buildings:
         # data['geo_id'] = building['building_id']
@@ -106,7 +115,7 @@ def api_parser(main_flat):
                         'square_flat': res[i]['product']['attributes'][2]['value'],
                         'square_kitchen': 0,
                         'distance_from_metro': 0,
-                        'nearest_station': '',
+                        'nearest_station': subways[i][0],
                         'condition': ''
                     }
                 }
@@ -124,7 +133,7 @@ def api_parser(main_flat):
                         'square_flat': res[i]['product']['attributes'][1]['value'],
                         'square_kitchen': 0,
                         'distance_from_metro': 0,
-                        'nearest_station': '',
+                        'nearest_station': subways[i][0],
                         'condition': ''
                     }
                 }
