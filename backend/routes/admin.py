@@ -1,16 +1,14 @@
-from fastapi import APIRouter, Depends
+from fastapi import APIRouter, Depends, BackgroundTasks
+from fastapi.encoders import jsonable_encoder
 from sqlalchemy.orm import Session
 
-from ..sql_app import crud, models, schemas
+from ..sql_app import crud, schemas
 from ..sql_app.database import get_db
-from ..sql_app import schemas
-
-adminRouter = APIRouter(prefix="/admin")
+from ..MailService import send_email
 
 
-@adminRouter.get("/")
-async def root():
-    return {"message": "Hello Admin Api"}
+adminRouter = APIRouter(prefix="/admin",
+                        tags=["admin"])
 
 
 @adminRouter.get("/getAllUsers", response_model=list[schemas.User])
@@ -19,15 +17,19 @@ async def get_all_users(skip: int = 0, limit: int = 100, db: Session = Depends(g
     return users
 
 
-@adminRouter.get("/getAllRegisterRequests", response_model=list[schemas.RegisterRequest])
+@adminRouter.get("/getAllRegisterRequests", response_model=list[schemas.RegisterUserRequest])
 async def get_all_users(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
     users = crud.get_register_requests(db, skip=skip, limit=limit)
     return users
 
 
-@adminRouter.post("/createUser", response_model=schemas.UserOut)
-async def register(register_request_id: schemas.UserIn, db: Session = Depends(get_db)):
-    user = crud.get_register_request(db, register_request_id.id)
-    user, user_password = crud.create_user(db, user)
-    return user, user_password
+@adminRouter.post("/createUser/{register_id}", response_model=schemas.LoginUserOut)
+async def register(register_id: int, background_tasks: BackgroundTasks, db: Session = Depends(get_db)):
+    user_request = crud.get_register_request(db, register_id)
+    if not user_request:
+        raise HTTPException(status_code=400, detail="Запрос на регистрацию не актуален")
+    user, user_password = crud.create_user(db, user_request)
+    send_email(background_tasks, 'Ваши данные для входа',
+               user.email, {'email': user.email, 'password': user_password})
+    return {'user': user, 'password': user_password}
 

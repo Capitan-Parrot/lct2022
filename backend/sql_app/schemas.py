@@ -1,4 +1,5 @@
-from pydantic import BaseModel
+from fastapi import UploadFile
+from pydantic import BaseModel, EmailStr
 
 
 class RegisterUserRequest(BaseModel):
@@ -19,15 +20,21 @@ class LoginUserRequest(BaseModel):
 
 
 class User(BaseModel):
+    id: int
     name: str
     email: str
     role: str
     hashed_password: str
-    id: int
+    work_counter: int
     is_banned: bool
 
     class Config:
         orm_mode = True
+
+
+class LoginUserOut(BaseModel):
+    user: User
+    password: str
 
 
 class RegisterUserRequest(BaseModel):
@@ -47,3 +54,28 @@ class Flat(BaseModel):
     has_balcony: bool
     metro_distance: int
     condition: str
+
+
+class FlatRequest(BaseModel):
+    flats_prices: list[float]
+    filename: str
+
+
+class UploadFileRequest(BaseModel):
+    file: UploadFile
+    user: User
+
+
+class CalculateCostRequest(BaseModel):
+    flats: list[Flat]
+    base_flats: dict[int, Flat]
+
+
+class DownloadFileRequest(BaseModel):
+    flats_prices: list[float]
+    filename: str
+
+
+class EmailSchema(BaseModel):
+    email: EmailStr
+

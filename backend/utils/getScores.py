@@ -1,6 +1,6 @@
 import json
 
-with open('config.json') as file:
+with open('backend/config.json') as file:
     main_config = json.load(file)
 
 

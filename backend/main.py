@@ -1,13 +1,13 @@
-import logging
+from dotenv import load_dotenv
+load_dotenv('backend/.env')
 import grequests
 from starlette.middleware.cors import CORSMiddleware
-
+import logging
 from fastapi import FastAPI
 import uvicorn
 
 from .sql_app import models
 from .sql_app.database import engine
-from backend.utils.priceByCityDistrict import Parser
 from .routes.index import router
 
 logging.basicConfig(format="%(asctime)s [%(name)s] - %(levelname)s: %(message)s", level=logging.INFO)
@@ -34,8 +34,9 @@ app.include_router(router)
 async def root():
     return {"message": "ok"}
 
-parser = Parser()
-parser.start()
+
+# parser = Parser()
+# parser.start()
 
 if __name__ == '__main__':
     uvicorn.run(app, host="0.0.0.0", port=8000)
