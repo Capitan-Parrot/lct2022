@@ -1,8 +1,9 @@
 import os
 import time
+from pprint import pprint
+
 import grequests
 import requests
-
 from .utils.checkIsAnalog import check_is_analog
 from .utils.getRectangle import get_rectangle_bounds
 
@@ -71,11 +72,16 @@ def get_info_buildings(buildings_id):
 
 
 def api_parser(base_flats):
-    x_coord, y_coord, geo_id = get_coords_by_address(base_flats[base_flats.keys()[0]]['address'])
+    x_coord, y_coord, geo_id = get_coords_by_address(base_flats[list(base_flats.keys())[0]]['address'])
+    x_coord, y_coord, geo_id = 55.697948, 37.579112, 4504235282605884
+    print(x_coord, y_coord, geo_id)
     x, y = get_rectangle_bounds([x_coord, y_coord])
     markers = get_markers(x, y)
-    buildings = get_buildings(x, y, markers)
-    info_buildings = get_info_buildings(','.join(j['building_id'] for j in markers))
+    # buildings = get_buildings(x, y, markers)
+    print(markers[0]['building_id'])
+    info_buildings = [get_info_buildings(','.join(markers[0]['building_id']))]
+    pprint(info_buildings[0])
+    return {}
     subways = []
     for i in range(len(info_buildings)):
         closest_subway = (info_buildings[i]['result']['items']['links']['nearest_stations'][0]['name'], info_buildings[i]['result']['items']['links']['nearest_stations'][0]['distance'])    
@@ -98,7 +104,7 @@ def api_parser(base_flats):
                 flat['content'] = {
                     'required': {
                         'address': create_address(res[i]['building']),
-                        'num_rooms': res[i]['product']['attributes'][1]['value'],
+                        'num_rooms': int(res[i]['product']['attributes'][1]['value']),
                         'building_segment': '',
                         'building_num_floors': 0,
                         'building_material': ''
@@ -113,10 +119,11 @@ def api_parser(base_flats):
                     }
                 }
             else:
+                continue
                 flat['content'] = {
                     'required': {
                         'address': create_address(res[i]['building']),
-                        'num_rooms': res[i]['product']['attributes'][0]['value'],
+                        'num_rooms': int(res[i]['product']['attributes'][0]['value']),
                         'building_segment': '',
                         'building_num_floors': 0,
                         'building_material': ''
@@ -130,7 +137,13 @@ def api_parser(base_flats):
                         'condition': ''
                     }
                 }
-            if check_is_analog(flat['content']['required'], base_flats['content']['required']['num_rooms']):
+            print(flat['content']['required']['num_rooms'])
+            print(base_flats)
+            num_rooms = flat['content']['required']['num_rooms']
+            if num_rooms not in base_flats:
+                continue
+            if check_is_analog(flat['content']['required'], base_flats[num_rooms]):
+                print('check_is_analog', list(flat))
                 flats[flat['content']['required']['num_rooms']].append(flat)
     return flats
 
@@ -146,4 +159,15 @@ def parse_2gis(base_flats=None):
 
 if __name__ == '__main__':
     tick = time.time()
+    print(parse_2gis({1: {"address": "Москва, проспект 60-летия Октября, 11",
+                                   "num_rooms": 1,
+                                   "building_segment": "Cтарый жилой фонд",
+                                   "building_num_floors": 16,
+                                   "building_material": "Панель",
+                                   "floor": 10,
+                                   "square_flat": 25.0,
+                                   "square_kitchen": 10.0,
+                                   "has_balcony": False,
+                                   "metro_distance": 10,
+                                   "condition": "economy"}}))
     print(time.time() - tick)

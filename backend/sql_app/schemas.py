@@ -37,7 +37,7 @@ class RegisterUserRequest(BaseModel):
 
 class Flat(BaseModel):
     address: str
-    num_rooms: str
+    num_rooms: int
     building_segment: str
     building_num_floors: int
     building_material: str

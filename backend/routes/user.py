@@ -1,49 +1,59 @@
-from fastapi import APIRouter, Depends, UploadFile
+from fastapi import APIRouter, Depends, Response, HTTPException
 from sqlalchemy.orm import Session
+from fastapi.responses import FileResponse
+from .. import service
+from ..sql_app import schemas
+from ..sql_app.crud import create_register_request, authenticate_user,\
+    get_user_by_email, get_register_request_by_email
+from ..sql_app.database import get_db
+from ..utils.workWithFile import get_flats_from_excel_file, save_file, update_file
 
-from backend import service
-from backend.sql_app import schemas
-from backend.sql_app.crud import create_user, create_register_request, login, authenticate_user
-from backend.sql_app.database import get_db
-from backend.sql_app.schemas import User
-from backend.utils.workWithFile import get_flats_from_excel_file, save_file, update_file, get_file
-
-userRouter = APIRouter(prefix="/user")
+userRouter = APIRouter(prefix="/user",
+                       tags=["user"])
 
 
-@userRouter.post("/register")
+@userRouter.post("/register", status_code=204, response_class=Response)
 async def register(register_request: schemas.RegisterUserRequest, db: Session = Depends(get_db)):
-    request_status = create_register_request(db, register_request)
-    return request_status
+    user = get_user_by_email(db, register_request.email)
+    if user:
+        raise HTTPException(status_code=400, detail="Пользователь с такой почтой уже существует")
+    request = get_register_request_by_email(db, register_request.email)
+    if request:
+        raise HTTPException(status_code=400, detail="Ваш запрос уже существует")
+    create_register_request(db, register_request)
 
 
-@userRouter.post("/login", response_model=User)
+@userRouter.post("/login", response_model=schemas.User)
 async def login(login_request: schemas.LoginUserRequest, db: Session = Depends(get_db)):
     user = authenticate_user(db, login_request)
+    if not user:
+        raise HTTPException(status_code=400, detail="Почта или пароль некорректны")
     return user
 
 
-@userRouter.post("/uploadFile")
-async def create_upload_file(file: UploadFile):
-    flats = await get_flats_from_excel_file(file)
-    await save_file(file, 'flats/' + file.filename)
-    return flats, file.filename
+@userRouter.post("/uploadFile", response_model=list[schemas.Flat])
+async def create_upload_file(create_file_request: schemas.UploadFileRequest):
+    flats = await get_flats_from_excel_file(create_file_request.file)
+    await save_file(create_file_request.file, f'flats/{create_file_request.user.name}/{create_file_request.file.filename}')
+    return flats
 
 
-@userRouter.get("/getAnalogs")
-async def get_analogs(flat: schemas.Flat):
-    analogs = service.find_analogs(flat)
+@userRouter.post("/getAnalogs")
+async def get_analogs(base_flats: dict[int, schemas.Flat]):
+    print(base_flats)
+    for flat in base_flats:
+        base_flats[flat] = dict(base_flats[flat])
+    analogs = service.find_analogs(base_flats)
     return analogs
 
 
 @userRouter.get("/calculateCost")
-async def calculate_cost(flats: list[schemas.Flat]):
-    analogs = service.calculate_cost(flats)
-    return analogs
+async def calculate_cost(calculate_request: schemas.CalculateCostRequest):
+    flats = service.calculate_cost(calculate_request.flats, calculate_request.base_flats)
+    return flats
 
 
-@userRouter.get("/downloadFile")
-async def download_file(flats_prices: list[float], filename: str):
-    await update_file(flats_prices, filename)
-    file = await get_file(filename)
-    return file
+@userRouter.post("/downloadFile")
+async def download_file(flat_request: schemas.FlatRequest):
+    await update_file(flat_request)
+    return FileResponse('files/' + flat_request.filename)

@@ -1,5 +1,5 @@
 import logging
-
+import grequests
 from starlette.middleware.cors import CORSMiddleware
 
 from fastapi import FastAPI
