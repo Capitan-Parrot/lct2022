@@ -5,6 +5,7 @@ from starlette.middleware.cors import CORSMiddleware
 import logging
 from fastapi import FastAPI
 import uvicorn
+from fastapi.staticfiles import StaticFiles
 
 from .sql_app import models
 from .sql_app.database import engine
@@ -24,6 +25,7 @@ app.add_middleware(
 )
 
 # app.mount("/web", StaticFiles(directory=''), name="static")
+app.mount("/static", StaticFiles(directory="c:/projects/lct2022_2/lct2022/frontend/static"), name="static")
 
 logger = logging.getLogger(__name__)
 

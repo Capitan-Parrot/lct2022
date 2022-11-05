@@ -1,8 +1,8 @@
 <!DOCTYPE HTML>
 <html lang="ru">
   <head>
-  <link href="../static/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="../static/css/user.css">
+  <link href="{{ url_for('static', path='users_prof/css/bootstrap.min.css') }}" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', path='users_prof/css/user.css') }}">
   <meta charset="utf-8"/> 
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -14,26 +14,26 @@
         <div class="container-fluid">
           <div class="navbar-header">
             <a class = "logo" href="">
-              <img src="../media/img/logo2.svg" class="d-inline-block align-text-center">
+              <img src="{{ url_for('static', path='users_prof/img/logo2.svg') }}" class="d-inline-block align-text-center">
               ГБУ.Недвижимость</a>
           </div>
           <div class="d-flex flex-row">
             <div class="p-2 bd-highlight">
               <button class="map">
                 Карта
-                <img src="../media/img/map.svg">
+                <img src={{ url_for('static', path='users_prof/img/map.svg') }}">
               </button>
             </div>
             <div class="p-2 bd-highlight">
               <button class="chart">
                 Оценка квартир
-                <img src="../media/img/chart.svg">
+                <img src={{ url_for('static', path='users_prof/img/chart.svg') }}">
               </button>
             </div>
             <div class="p-2 bd-highlight">
               <button class="user">
                 Личный кабинет
-                <img src="../media/img/user.svg">
+                <img src={{ url_for('static', path='users_prof/img/user.svg') }}">
               </button>
             </div>
           </div>
