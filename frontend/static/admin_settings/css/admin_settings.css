@@ -91,177 +91,181 @@ nav {
 	transition: 0.1 easy;
 }
 
-.all_user_information {
-	margin-top: 100px;
-	margin-left: 24px;
-	
-}
-
 .profile {
-	max-width: 215px;
-	padding-left: 27px;
-	padding-right: 27px;
 	font-family: 'Jost';
 	font-style: normal;
 	font-weight: 400;
-	font-size: 40px;
-	line-height: 58px;
-	height: 58px;
-	background: #F19972;
-	border-radius: 20px;
+	font-size: 30px;
+	line-height: 43px;
+	display: flex;
+	align-items: center;
+	color: #2D3042;
 	border: none;
+	background: #EBE4E3;
+	margin-top: 63px;
+	margin-left: 58px;
 
 }
 
 .favourites {
-	max-width: 215px;
-	padding-left: 27px;
-	padding-right: 27px;
 	font-family: 'Jost';
 	font-style: normal;
 	font-weight: 400;
-	font-size: 40px;
-	line-height: 58px;
-	height: 58px;
-	background: #EBE4E3;
+	font-size: 30px;
+	line-height: 43px;
+	display: flex;
+	align-items: center;
+	color: #2D3042;
 	border: none;
-	margin-top: 45px;
-
+	background: #EBE4E3;
+	margin-top: 52px;
+	margin-left: 58px;
 }
 
 .line {
 	background: #2D3042;
 	border: 2px solid #2D3042;
 	width: 272px;
-	margin-top: 25px;
+	margin-top: 46px;
+	margin-left: 31px;
 }
 .admin_settings {
-	max-width: 215px;
-	padding-left: 27px;
-	padding-right: 27px;
+	background: #F19972;
+	border-radius: 20px;
+	font-family: 'Jost';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 30px;
+	line-height: 43px;
+	color: #2D3042;
+	padding: 9px 27px 9px 27px;
+	border: none;
+	margin-top: 49px;
+	margin-left: 31px;
+}
+
+
+.notifications {
+	background: #F8F2F2;
+	border-radius: 20px;
+	width: Hug 803px;
+	height: 63px;
+	margin-top: 57px;
+	margin-left: 80px;
+}
+
+.circle {
+	background: #F19972;
+	width: 20px;
+	height: 20px;
+	border-radius: 20px 20px 20px 20px;
+	margin-top: 21.5px;
+}
+
+.up_arrow {
+	margin-top: 20px;
+	margin-left: 22px;
+}
+
+.notifications_h {
 	font-family: 'Jost';
 	font-style: normal;
 	font-weight: 400;
 	font-size: 40px;
 	line-height: 58px;
-	height: 58px;
-	background: #EBE4E3;
-	border: none;
-	margin-top: 45px;
-	}
-.face {
-	width: 166px;
-	height: 166px;
-	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-	border-radius: 166px;
-	background: #F8F2F2;
-	border: none;
+	color: #2D3042;
+	margin-left: 12px;
 }
 
-.user_information {
-	margin-left: 98px;
+.new_users {
+	margin-top: 16px;
+	background: #F8F2F2;
+	border-radius: 20px;
+	width: width: Hug 803px;;
+	padding: 40px 106px 40px 106px;
+	margin-left: 80px;
 }
 
 .user_name {
 	font-family: 'Tenor Sans';
 	font-style: normal;
 	font-weight: 400;
-	font-size: 40px;
-	line-height: 47px;
-	color: #2D3042;
-	margin-left: 39px;
-	margin-top: 21px;
-}
-
-.settings {
-	border: none;
-	margin-left: 40px;
-	background: #F8F2F2;
-	margin-top: 50px;
-}
-
-.settings:hover{
-	filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.3));
-	transition: 0.1 easy;
-}
-
-
-.user_type {
-	font-family: 'Jost';
-	font-style: normal;
-	font-weight: 300;
 	font-size: 30px;
-	line-height: 43px;
-	color: #4F5D74;
-	margin-left: 39px;
-	margin-top: 8px;
-}
-
-.email {
-	font-family: 'Jost';
-	font-style: normal;
-	font-weight: 400;
-	font-size: 30px;
-	line-height: 43px;
+	line-height: 35px;
 	color: #2D3042;
-	margin-left: 39px;
-	margin-top: 40px;
-}
+	margin-left: 24px;
+	margin-top: 10px;
 
-.email_value {
-	font-family: 'Jost';
-	font-style: normal;
-	font-weight: 300;
-	font-size: 30px;
-	line-height: 43px;
-	color: #2D3042;
-	margin-left: 10px;
-	margin-top: 40px;
-}
-
-.number {
-	font-style: normal;
-	font-weight: 400;
-	font-size: 30px;
-	line-height: 43px;
-	color: #2D3042;
-	margin-left: 39px;
-	margin-top: 32px;
-}
-
-.number_value {
-	font-family: 'Jost';
-	font-style: normal;
-	font-weight: 300;
-	font-size: 30px;
-	line-height: 43px;
-	color: #2D3042;
-	margin-left: 10px;
-	margin-top: 32px;
 }
 
 .id {
+	font-family: 'Jost';
 	font-style: normal;
 	font-weight: 400;
-	font-size: 30px;
-	line-height: 43px;
+	font-size: 20px;
+	line-height: 145%;
 	color: #2D3042;
-	margin-left: 39px;
-	margin-top: 32px;
+	margin-left: 24px;
 }
 
 .id_value {
 	font-family: 'Jost';
 	font-style: normal;
 	font-weight: 300;
-	font-size: 30px;
-	line-height: 43px;
+	font-size: 20px;
+	line-height: 29px;
 	color: #2D3042;
 	margin-left: 10px;
-	margin-top: 32px;
+}
+
+.yes_button {
+	border: none;
+	background: #F8F2F2;
+	margin-left: 24px;
+	margin-top: 10px;
 }
 
 
+.no_button {
+	border: none;
+	background: #F8F2F2;
+	margin-left: 20px;
+	margin-top: 10px;
+}
+
+.search {
+	width: Hug 803px;
+	background: #F8F2F2;
+	border-radius: 20px;
+	margin-left: 80px;
+	margin-top: 100px;
+}
+
+.search_h {
+	font-family: 'Jost';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 40px;
+	line-height: 58px;
+	color: #2D3042;
+	margin-left: 34px;
+}
+
+.search_btn {
+	border: none;
+	background: #F8F2F2;
+	margin-right: 14px;
+	margin-top: 13px;
+}
+
+.search_users {
+	background: #F8F2F2;
+	border-radius: 20px;
+	padding: 42px 149px 42px 149px;
+	margin-top: 16px;
+	width: Hug 803px;
+	margin-left: 80px;
+}
 
 .footer {
 	background: #2D3042;
@@ -368,13 +372,4 @@ nav {
 	font-size: 23px;
 	line-height: 28px;
 	color: #4F5D74;
-}
-
-
-.admin_information {
-	background: #F8F2F2;
-	border-radius: 20px;
-	padding: 33px 40px 67px 38px;
-	margin-left: 193px;
-	margin-right: 70px;
 }

@@ -13,6 +13,10 @@ nav {
 	background: #F19972;
 }
 
+button {
+	border: none;
+}
+
 .logo {
 	font-family: 'Jost';
 	font-style: normal;
@@ -378,3 +382,117 @@ nav {
 	margin-left: 193px;
 	margin-right: 70px;
 }
+
+.files {
+	background: #F8F2F2;
+	border-radius: 20px;
+	width: 852px;
+	margin-left: 202px;
+	font-family: 'Jost';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 40px;
+	line-height: 58px;
+	color: #2D3042;
+	margin-top: 39px;
+	padding-left: 44px;
+}
+
+.all_files {
+	background: #F8F2F2;
+	border-radius: 20px;
+	width: 852px;
+	margin-left: 202px;
+	padding: 73px 35px 31px 35px;
+	margin-top: 16px;
+}
+
+
+.add_file_block {
+	padding: 6px 103px 45px 103px;
+	background: rgba(235, 228, 227, 0.4);
+	border: 1px dashed #4F5D74;
+	border-radius: 10px;
+	margin-top: 27px;
+
+}
+
+
+.h_add_file {
+	font-family: 'Jost';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 30px;
+	line-height: 43px;
+	color: #2D3042;
+	font-family: 'Jost';
+
+}
+
+.add_file_here {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 15px;
+	line-height: 22px;
+	color: rgba(25, 26, 34, 0.68);
+}
+
+.file_extension {
+	font-family: 'Jost';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 15px;
+	line-height: 22px;
+	color: rgba(25, 26, 34, 0.68);
+	margin-top: 15.86%;
+}
+
+.add_file_btn {
+	background: #F19972;
+	border-radius: 10px 0px 0px 10px;
+	padding-top: 10.5px;
+	padding-bottom: 10.5px;
+	padding-left: 55px;
+	padding-right: 55px;
+}
+
+.disk_btn {
+	background: #F19972;
+	border-width: 0px 1px;
+	border-style: solid;
+	border-color: #2D3042;
+	border-radius: 0px;
+	padding-left: 29px;
+	padding-right: 29px;
+}
+
+.dropbox_btn {
+	background: #F19972;
+	border-radius: 0px 10px 10px 0px;
+	padding-left: 29px;
+	padding-right: 29px;
+}
+
+
+.line {
+	border: 1.5px solid #4F5D74;
+	margin-right: 35px;
+	margin-top: 40px;
+	width: 782px;
+
+}
+
+
+.file{
+	margin-top: 27px;
+}
+
+.file_name {
+	font-family: 'Jost';
+	font-stySle: normal;
+	font-weight: 400;
+	font-size: 25px;
+	line-height: 36px;
+	color: #2D3042;
+}
+
