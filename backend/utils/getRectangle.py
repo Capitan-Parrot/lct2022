@@ -17,7 +17,7 @@ def get_rectangle_bounds(coordinates):
     southwest = d.destination(point=start, bearing=southwest_angle)
     bounds = []
     for point in [northeast, southwest]:
-        coords = (point.longitude, point.latitude)
+        coords = [point.longitude, point.latitude]
         bounds.append(coords)
 
     return bounds
