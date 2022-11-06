@@ -1,5 +1,4 @@
 from fastapi import APIRouter, Depends, BackgroundTasks, HTTPException
-from fastapi.encoders import jsonable_encoder
 from sqlalchemy.orm import Session
 
 from ..sql_app import crud, schemas
