@@ -1,5 +1,5 @@
 from .utils import getScores
-from .parsing_2gis import parse_2gis
+from backend.utils.parser_2gis import parse_2gis
 
 
 def get_scores(analog, main_flat):

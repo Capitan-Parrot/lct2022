@@ -3,7 +3,7 @@ from sqlalchemy.orm import Session
 
 from ..sql_app import crud, schemas
 from ..sql_app.database import get_db
-from ..MailService import send_email
+from backend.utils.MailService import send_email
 
 
 adminRouter = APIRouter(prefix="/admin",

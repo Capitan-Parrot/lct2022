@@ -5,7 +5,7 @@ import requests
 
 from backend.filters import filter_floors, filter_material, filter_segment
 from backend.utils.getSession import session
-from .utils.getRectangle import get_rectangle_bounds
+from backend.findFlats.getRectangle import get_rectangle_bounds
 
 
 def get_coords_by_address(address):
